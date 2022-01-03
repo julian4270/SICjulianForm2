@@ -1,0 +1,43 @@
+<div class="formularioRegistro">
+    <h2>SuperIntendencia SIC</h2>
+    <img src="./assets/sic.png">
+    <form [formGroup]="personForm" (ngSubmit)="Save">
+        <div class="form-group">
+            <label>Numero Documento: </label>
+            <input type="number" formControlName="Documento" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Email: </label>
+            <input type="text" formControlName="Email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Comentarios: </label>
+            <input type="textarea" formControlName="Email" class="form-control">
+        </div>
+        <div class="form-group">
+            <table>
+                <tr>
+                    <td>
+                        <label>MarcaFavoritaPC: </label>
+                    </td>
+                </tr>
+                <td>
+                    <select name="pc" id="pc" formControlName="pc" class="form-control">
+                        <option value="item.id" *ngFor="pc">Lenovo</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="MAC">MAC</option>
+                        <option value="HP">HP</option>
+                        <option value="Asus">Asus</option>
+                    </select>
+                </td>
+            </table>
+        </div>
+        <p>
+        <p>
+            <button type="submit" class="btn btn-primary">Save</button>
+
+    </form>
+</div>
+
+
+<router-outlet></router-outlet>
